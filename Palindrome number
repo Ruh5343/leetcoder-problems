@@ -1,0 +1,20 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        vector <int> v,z;
+       if(x<0){
+        return false;
+       }
+       while(x>0){
+        int k=x%10;
+        v.push_back(k);
+        x=x/10;}
+       z=v;
+      reverse(v.begin(),v.end());
+     if(v==z){
+        return true;
+     }else{
+     return false;
+     }
+    }
+};
